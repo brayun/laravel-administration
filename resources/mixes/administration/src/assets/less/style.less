@@ -1,0 +1,162 @@
+/*方法*/
+.transform(@x, @y) {
+  transform: translate(@x, @y);
+  -webkit-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+}
+
+
+/*全局*/
+.prepend.ivu-input-type {
+  .ivu-input {
+    padding-right: 5px;
+    padding-left: 32px;
+  }
+  &>.ivu-icon {
+    left: 0;
+  }
+}
+
+html, body {
+    height: 100%;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: all 0.5s ease
+}
+
+.fade-enter, .fade-leave-active {
+    opacity: 0
+}
+
+.layout{
+    height: 100%;
+    position: relative;
+
+    .ivu-row-flex {
+        &.hide-header {
+          .layout-menu-left {
+            display: none;
+          }
+          .layout-headers, .single-page-content {
+            padding-left: 0;
+          }
+        }
+
+        .layout-menu-left{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #464c5b;
+            width: 200px;
+            height: 100%;
+            overflow-y: scroll;
+            z-index: 100;
+
+            .layout-logo-left{
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                color: #fff;
+                background: url(../images/logo.png) no-repeat center left;
+                background-size: auto 70%;
+                background-position: 10px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+
+        .layout-headers {
+            width: 100%;
+            padding-left: 200px;
+            position: fixed;
+
+            .layout-header {
+              background-color: #fff;
+
+              &>button.ivu-btn-text {
+                padding: 13px 20px;
+                border: none;
+                background-color: #fff;
+                float: left;
+              }
+              .ivu-menu-horizontal.ivu-menu-light {
+                float: left;
+                &:after {
+                  background-color: inherit;
+                }
+                &:last-child {
+                    float: right;
+                }
+              }
+              &:after {
+                clear: both;
+                display: block;
+                content: "";
+              }
+            }
+            .layout-breadcrumb{
+                padding: 10px 15px;
+                background-color: #f5f7f9;
+                box-shadow: 1px 1px 0px 0px #e2e2e2;
+            }
+        }
+
+        .single-page-content {
+            background: #f5f7f9;
+            width: 100%;
+            padding-left: 200px;
+            padding-top: 104px;
+
+            .single-page {
+                margin: 15px 15px;
+                background-color: #fff;
+                padding: 10px;
+            }
+        }
+
+        .layout-copy {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+    }
+}
+
+.login {
+  background-color: #374051;
+  height: 100%;
+  position: relative;
+
+  .login-con {
+    width: 400px;
+    max-width: 80%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    .transform(-50%, -50%);
+
+    .login-header {
+      text-align: center;
+      padding-bottom: 10px;
+      img {
+        width: 40%;
+      }
+    }
+
+    .login-form {
+      background-color: #fff;
+      padding: 40px 30px 15px 30px;
+
+      .remember {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

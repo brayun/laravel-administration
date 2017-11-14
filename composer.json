@@ -17,7 +17,7 @@
             "email": "ethan@brayun.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Brayun\\Administration\\": "src/"

@@ -1,0 +1,39 @@
+{
+    "name": "brayun/administration",
+    "description": "administration for laravel 5",
+    "type": "brayun-module",
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": "5.5.*",
+        "brayun/framework": "^1.0",
+        "zizaco/entrust": "^1.8"
+    },
+    "homepage": "https://www.brayun.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ethan",
+            "email": "ethan@brayun.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Brayun\\Administration\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brayun\\Administration\\ModuleServiceProvider",
+                "Zizaco\\Entrust\\EntrustServiceProvider"
+            ],
+            "aliases": {
+                "Entrust": "Zizaco\\Entrust\\EntrustFacade"
+            }
+        }
+    }
+}
